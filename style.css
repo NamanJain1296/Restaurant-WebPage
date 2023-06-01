@@ -1,0 +1,303 @@
+@import url(https://fonts.google.com/specimen/Roboto?query=roboto);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    line-height: 1.4;
+    font-weight: 300;
+    font-family: "Roboto",sans-serif;
+}
+
+button {
+    padding: 10px 15px;
+    color: #fff;
+    border: none;
+    transition: 0.2s ease-in-out;
+}
+
+button:hover {
+    opacity: 0.7;
+    transition: 0.2s ease-in-out;
+}
+
+/* || Navigation */
+
+nav{
+    box-shadow: 5px 5px 5px rgba(1,1,1,0.05);
+    position: sticky;
+    top: 0;
+    margin-bottom: 32px;
+    background: white;
+    padding: 10px;
+    z-index: 50; 
+}
+
+a{
+    font-size: 20px;
+    text-decoration: none;
+    color: brown;
+    margin: -50px;
+    justify-content: right;
+}
+
+a:hover{
+    font-size: 22px;
+    color: rgb(239, 10, 10);
+    transition: 0.2s ease-in-out;
+}
+
+a::selection{
+    color: royalblue;
+}
+
+.navigation{
+    padding-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.bar_icon{
+    font-size: 32px;
+}
+
+.dropbtn{
+    background-color: #000;
+}
+
+.bar_icon:hover{
+    opacity: 0.4;
+    transition: 0.2s ease-in-out;
+}
+
+
+/* || Hero Section */
+
+.hero{
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.food{
+    border-radius: 50%;
+}
+
+.hero_content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tag{
+    font-size: medium;
+    background-color: #149f39;
+    padding: 5px 10px;
+    color: white;
+    align-self: flex-start;
+}
+
+.hero_content h1{
+    font-size: 72px;
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+.hero_content p{
+    font-size: small;
+}
+
+.explore_now{
+    background-color: #d49f55;
+    align-self: flex-start;
+    width: 25%;
+    height: 20%;
+}
+
+/* || Features Section */
+
+.features{
+    margin-top: 120px;
+    margin-bottom: 50px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.feature img{
+    width: 72px;
+}
+
+.feature{
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    transition: 0.2s ease-in-out;
+}
+
+.feature p{
+    font-size:smaller;
+}
+
+.feature:hover{
+    transition: 0.2s ease-in-out;
+    box-shadow: 5px 5px 5px rgba(1,1,1,0.05);
+}
+
+.divider{
+    border: 1px solid #666;
+    margin: 20px 0;
+}
+
+/* Menu Section */
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin: 50px 0;
+    align-items: center;
+}
+
+.menu h2{
+    font-size: xx-large;
+    font-weight: 200;
+}
+
+.grid {
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 
+    "I1 I1 I2 I3"
+    "I1 I1 I2 I7"
+    "I4 I5 I6 I7";
+}
+
+.item1{
+    grid-area: I1;
+}
+.item2{
+    grid-area: I2;
+}
+.item3{
+    grid-area: I3;
+}
+.item4{
+    grid-area: I4;
+}
+.item5{
+    grid-area: I5;
+}
+.item6{
+    grid-area: I6;
+}
+.item7{
+    grid-area: I7;
+}
+
+.grid-image{
+    border-radius: 10px;
+    transition: 0.2s ease-in-out;
+    width: 100%;
+    height: 100%;
+}
+
+.grid-image:hover{
+    transition: 0.2s ease-in-out;
+    transform: scale(1.05);
+}
+
+
+
+.menu .tag{
+    align-self: center;
+}
+
+/* Footer */
+
+footer{
+    background-color: #fff0db;
+}
+
+.footer_container{
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.link_lists ul{
+    list-style: none;
+}
+
+.link_lists ul li{
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.link_lists h3{
+    margin-bottom: 10px;
+    color: gray;
+}
+
+.news_letter h3{
+    margin-bottom: 10px;
+    color: gray;
+}
+
+.news_letter input{
+    padding: 5px 40px;
+    margin-bottom: 10px;
+}
+
+.icon_container{
+    display: flex;
+    gap: 15px;
+    font-size: 32px;
+}
+
+@media (max-width:786px){
+    .hero{
+        flex-direction: column;
+    }
+    
+    .hero_image {
+        display: flex;
+        justify-content: center;
+    }
+
+    .hero_image{
+        width:90%;
+    }
+
+    .hero_content{
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .hero_content h1 {
+        font-size: 32px;
+    }
+    .features{
+        flex-direction: column;
+    }
+    .feature{
+        flex-direction: column;
+    }
+    .grid{
+        padding: 10px;
+    }
+    .footer_container{
+        flex-direction: column;
+    }
+}
+
